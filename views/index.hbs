@@ -1,0 +1,44 @@
+<!-- Body -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Latest Posts</h1>
+
+            {{#each articles as |article|}}
+                <article>
+                    <h2><a href="/single/{{article.id}}">{{article.title}}</a></h2>
+                    <hr>
+                    <img src="http://placehold.it/900x300" class="img-responsive">
+                    <br />
+                    <p class="lead">{{article.content}}</p>
+                    <p class="text-right">
+                        <a href="/single/{{article.id}}">
+                            continue reading...
+                        </a>
+                    </p>
+                    <hr>
+                </article>
+            {{/each}}
+
+            <ul class="pager">
+                <li class="previous"><a href="#">&larr; Previous</a></li>
+                <li class="next"><a href="#">Next &rarr;</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-4">
+
+            <div class="well text-center">
+                <p class="lead">
+                    Don't want to miss updates? Please click the below button!
+                </p>
+                <button class="btn btn-primary btn-lg">Subscribe to my feed</button>
+            </div>
+
+            {{> categorySidebar }}
+
+            {{> latestPostsSidebar }}
+
+        </div>
+    </div>
+</div>

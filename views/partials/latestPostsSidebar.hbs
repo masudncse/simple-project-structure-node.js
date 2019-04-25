@@ -1,0 +1,13 @@
+<!-- Latest Posts -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>Latest Posts</h4>
+    </div>
+    <ul class="list-group">
+        {{#each articles as |article|}}
+            <li class="list-group-item">
+                <a href="/single/{{article.id}}">{{article.title}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</div>
